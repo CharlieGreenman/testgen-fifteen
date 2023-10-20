@@ -1,4 +1,4 @@
-import { Component, OnInit, NgModule, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, NgModule, Output, EventEmitter, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -16,6 +16,7 @@ export class GlobalHeaderComponent implements OnInit {
   faQuestionCircle = faQuestionCircle;
   faBell = faBell;
   @Output() sideNavToggle: EventEmitter<any> = new EventEmitter();
+  @Input() authenticated = false;  
 
   constructor() {}
 

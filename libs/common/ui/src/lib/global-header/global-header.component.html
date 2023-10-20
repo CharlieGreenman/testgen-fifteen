@@ -6,7 +6,11 @@
     >
       <mat-icon>menu</mat-icon>
   </button>
-  <div class="Toolbar__Icons">
+  <div *ngIf="!authenticated" class="GlobalHeader__authentication">
+    <button mat-raised-button color="accent">Log In</button>
+    <button mat-raised-button class="GlobalHeader__sign-up">Sign Up</button>
+  </div>
+  <div *ngIf="authenticated" class="Toolbar__Icons">
     <fa-icon
       [icon]="faBell"
       aria-hidden="false"
